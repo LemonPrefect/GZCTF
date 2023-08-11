@@ -2,37 +2,66 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
-  <div style="max-width: 544px; margin: 0 auto; padding: 20px">
-    <h2 style="text-align: center">{title}</h2>
-    <p>你好，{userName}！</p>
-    <p style="text-indent: 2em">{information}</p>
-    <p style="text-align: center; padding: 20px">
-      <a
-        href="{url}"
-        style="
-          font: 1rem Arial;
-          white-space: nowrap;
-          text-decoration: none;
-          background-color: #000000;
-          color: #ffffff;
-          padding: 10px 20px 10px 20px;
-          border: 1px solid #888888;
-          border-radius: 7px;
-          margin: 10px auto;
-        "
-      >
-        {btnmsg}
-      </a>
-    </p>
-    <div style="font-size: 0.8rem">
-      <p>
-        如果以上按钮无效，请复制此链接到浏览器访问：<br /><span
-          style="word-break: break-all; font: 0.8em monospace"
-          >{url}
-        </span>
-      </p>
-      <p>如果你没有进行相关操作，请忽略此封邮件。</p>
+  <div id="cTMail-Wrap" style="word-break: break-all;box-sizing:border-box;text-align:center;min-width:520px; max-width:860px; border:1px solid #f6f6f6; background-image: url(https://s4d.lemonprefect.cn/lemon/nepnep_logo.jpg); background-repeat: no-repeat; background-size: auto 100%; margin:auto; padding:20px 0 30px; font-family:'helvetica neue',PingFangSC-Light,arial,'hiragino sans gb','microsoft yahei ui','microsoft yahei',simsun,sans-serif">
+    <div class="main-content" style="">
+      <table style="width:100%;font-weight:300;margin-bottom:10px;border-collapse:collapse">
+        <tbody>
+          <tr style="font-weight:300">
+            <td style="width:3%;max-width:30px;"></td>
+            <td style="max-width:600px; opacity: 92%;">
+              <div id="cTMail-logo" style="width:92px; height:25px;">
+              </div>
+              <p style="height:2px;background-color: rgb(222, 174, 234);border: 0;font-size:0;padding:0;width:100%;margin-top:20px;"></p>
+              <div id="cTMail-inner" style="background-color:#fff; padding:23px 0 20px;box-shadow: 0px 1px 1px 0px rgba(122, 55, 55, 0.2);text-align:left;">
+                <table style="width:100%;font-weight:300;margin-bottom:10px;border-collapse:collapse;text-align:left;">
+                  <tbody>
+                    <tr style="font-weight:300">
+                      <td style="width:3.2%;max-width:30px;"></td>
+                      <td style="max-width:480px;text-align:left;">
+                        <h1 id="cTMail-title" style="font-weight:bold;font-size:20px; line-height:36px; margin:0 0 16px;">{title} - NepCTF 2023</h1>
+                        <p id="cTMail-userName" style="font-size:14px;color:#333; line-height:24px; margin:0;">{userName}&nbsp;{information}</p>
+                        <p class="cTMail-content" style="line-height: 24px; margin: 6px 0px 0px; overflow-wrap: break-word; word-break: break-all;">
+                          <span style="color: rgb(51, 51, 51); font-size: 14px;">点击下面的按钮完成验证。</span>
+                        </p>
+                        <p class="cTMail-content" style="font-size: 14px; color: rgb(51, 51, 51); line-height: 24px; margin: 6px 0px 0px; word-wrap: break-word; word-break: break-all;">
+                          <a id="cTMail-btn" href={url} style="font-size: 16px; line-height: 45px; display: block; background-color: rgb(222, 174, 234); color: rgb(255, 255, 255); text-align: center; text-decoration: none; margin-top: 20px; border-radius: 3px;">{btnmsg}</a>
+                        </p>
+                        <p class="cTMail-content" style="line-height: 24px; margin: 6px 0px 0px; overflow-wrap: break-word; word-break: break-all;">
+                          <span style="color: rgb(51, 51, 51); font-size: 14px;">或复制链接到浏览器访问：<br /><span
+                            style="word-break: break-all; font: 0.8em monospace"
+                            >{url}
+                          </span></span>
+                        </p>
+                        <p style="border-top: 1px solid rgb(234, 237, 240); margin: 20px 0px;"></p>
+                        <dl style="line-height: 18px;">
+                          <dt style="color: rgb(51, 51, 51); font-size: 14px; margin: 0px 0px 8px; padding: 0px;"></dt>
+                          <dt style="color: rgb(51, 51, 51); font-size: 14px; margin: 0px 0px 8px; padding: 0px;">温馨提示：</dt>
+                          <dd style="margin: 0px 0px 6px; padding: 0px; line-height: 22px;"></dd>
+                          <dd style="margin: 0px 0px 6px; padding: 0px; line-height: 22px;">
+                            <span style="color: rgb(51, 51, 51); font-size: 12px;">
+                            <span style="font-size: 12px;">如果不是您的操作请忽略该邮件。</span>
+                            </span>
+                          </dd>
+                        </dl>
+                        <dl style="font-size: 14px; color: rgb(51, 51, 51); line-height: 18px;">
+                          <dd style="margin: 0px 0px 6px; padding: 0px; font-size: 12px; line-height: 22px;">
+                            <p id="cTMail-sender" style="font-size: 14px; line-height: 26px; word-wrap: break-word; word-break: break-all; margin-top: 32px;">此致 
+                              <br>
+                              <strong>Nepnep 联合战队</strong>
+                            </p>
+                          </dd>
+                        </dl>
+                      </td>
+                      <td style="width:3.2%;max-width:30px;"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+            <td style="width:3%;max-width:30px;"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <p style="font-size: 0.7em; text-align: right; color: #333">GZCTF @ {nowtime}</p>
   </div>
 </body>
